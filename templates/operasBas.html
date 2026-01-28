@@ -1,19 +1,17 @@
-{% extends "layaut.html" %}
-
+{% extends 'layout.html' %}
 
 {% block content %}
-
- <form action="/resultado" method="post">
+  <form action="/operasBas" method="post">
     <div class="mb-3">
-        <label for="n1" class="form-label">Numero1</label>
-        <input type="text" class="form-central" name="n1" id="n1">
+      <label for="n1" class="form-label">Numero 1</label>
+      <input type="text" class="form-label" name="n1" id="n1" />
     </div>
     <div class="mb-3">
-        <label for="n2" class="form-label">Numero2</label>
-        <input type="text" class="form-central" name="n2" id="n2">
+      <label for="n2" class="form-label">Numero 2</label>
+      <input type="text" class="form-label" name="n2" id="n2" />
     </div>
-
     <button class="btn btn-primary" type="submit">Calcular</button>
- </form>
+  </form>
 
-{%endblock%}
+  <h1>La suma es: {{res}}</h1>
+{% endblock %}
